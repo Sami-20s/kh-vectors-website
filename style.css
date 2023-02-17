@@ -1,0 +1,277 @@
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+body,
+html,
+*,
+*::before,
+* ::after {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Raleway", sans-serif;
+    overflow-x: hidden;
+}
+ul,
+ul li {
+    list-style: none;
+}
+a,
+a:visited {
+    font-weight: 500;
+    text-decoration: none;
+}
+:root {
+    --px: 65px;
+    --d-b: #fdede9;
+    --l-b: #aa6ff3;
+    --text-color: #36353a;
+}
+/* Styles */
+
+.background-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    z-index: -1;
+}
+
+nav {
+    padding: 20px var(--px);
+}
+
+nav .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-wrapper .logo img {
+    width: 100px;
+}
+nav .nav-wrapper :is(.links, .links ul) {
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+}
+nav .nav-wrapper .links ul li a {
+    font-size: 22px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+img.search-icon {
+    width: 25px;
+}
+.search-btn {
+    all: initial;
+    cursor: pointer;
+}
+.search-input {
+    height: 30px;
+    min-width: 200px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    padding: 10px;
+}
+.hero {
+    padding: 15rem var(--px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.hero .hero-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.hero-wrapper h1 {
+    font-size: 5rem;
+    max-width: 350px;
+    font-weight: 700;
+}
+
+.hero-wrapper p {
+    max-width: 460px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #fff;
+}
+
+#about-us {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--d-b);
+}
+#about-us .about-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5rem;
+}
+.about-wrapper h2 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+.about-wrapper .bottom-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
+.about-wrapper .bottom-section a {
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: var(--l-b);
+    border-radius: 10px;
+    border: none;
+    color: var(--d-b);
+}
+.about-wrapper .bottom-section p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.5;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    max-width: 480px;
+    text-align: center;
+}
+
+#download {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--d-b);
+}
+
+#download .download-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+}
+
+#download .download-wrapper h3 {
+    text-align: center;
+    color: #4a4f54;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+#download .download-wrapper .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+}
+
+#download .download-wrapper .grid .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    cursor: pointer;
+}
+#download .download-wrapper .grid .item p {
+    font-size: 1.2rem;
+    color: #614f54;
+    font-weight: 500;
+}
+#download .download-wrapper .grid .item img {
+    width: 200px;
+}
+
+#contact-us {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--d-b);
+}
+#contact-us .contact-us-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+}
+#contact-us .contact-us-wrapper h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #4a4f54;
+}
+#contact-us .contact-us-wrapper p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.5;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #606e7b;
+    max-width: 480px;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+#contact-us .contact-us-wrapper form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+#contact-us .contact-us-wrapper form .inputs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    width: 50rem;
+}
+#contact-us .contact-us-wrapper form .inputs .top-section {
+    display: flex;
+    column-gap: 1rem;
+    width: 100%;
+}
+#contact-us .contact-us-wrapper form .inputs .top-section input {
+    width: 50%;
+    height: 50px;
+    border: solid 2px #e2e8ec;
+    background-color: var(--d-b);
+    color: #8895a0;
+    padding: 0 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+#contact-us .contact-us-wrapper form .inputs .bottom-section input {
+    width: 100%;
+    height: 50px;
+    border: solid 2px #e2e8ec;
+    background-color: var(--d-b);
+    color: #8895a0;
+    padding: 0 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+#contact-us .contact-us-wrapper form button {
+    padding: 1.4rem 2.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: var(--l-b);
+    border-radius: 10px;
+    border: none;
+    color: var(--d-b);
+}
